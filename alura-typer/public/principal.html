@@ -1,10 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Alura Typer</title>
 </head>
+
 <body>
-    <!-- Seja bem vindo ao curso de jQuery :) -->
+    <h1>Alura Typer</h1>
+
+    <!-- Frase -->
+    <p class="frase">Esta frase tem cinco palavras.</p>
+
+    <!-- Contagem de Palavras e Segundos da Frase -->
+    <ul class="informacoes">
+        <li>
+            <spam id="tamanho-frase">5</spam> palavras
+        </li>
+        <li>10 segundos</li>
+    </ul>
+
+    <!-- Digitação do usuário -->
+    <textarea class="campo-digitacao" cols="40" rows="8"></textarea>
+
+    <!-- Contador de palavras e caracteres do usuário -->
+    <ul class="informacoes">
+        <li>
+            <spam id="contador-caracteres">0</spam> caracteres
+        </li>
+        <li>
+            <spam id="contador-palavras">0</spam> palavras
+        </li>
+    </ul>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
