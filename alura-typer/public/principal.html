@@ -4,34 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <title>Alura Typer</title>
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
-    <h1>Alura Typer</h1>
+    <div class="container">
+        <h1 class="center">Alura Typer</h1>
 
-    <!-- Frase -->
-    <p class="frase">Esta frase tem cinco palavras.</p>
+        <!-- Frase -->
+        <p class="frase center">Esta frase tem cinco palavras.</p>
 
-    <!-- Contagem de Palavras e Segundos da Frase -->
-    <ul class="informacoes">
-        <li>
-            <spam id="tamanho-frase">5</spam> palavras
-        </li>
-        <li>10 segundos</li>
-    </ul>
+        <!-- Contagem de Palavras e Segundos da Frase -->
+        <ul class="informacoes center">
+            <li>
+                <i class="small material-icons icones">description</i>
+                <spam id="tamanho-frase">5</spam> palavras
+            </li>
+            <li>
+                <i class="small material-icons icones">query_builder</i>
+                <span id="tempo-digitacao">10</span> segundos
+            </li>
+        </ul>
 
-    <!-- Digitação do usuário -->
-    <textarea class="campo-digitacao" cols="40" rows="8"></textarea>
+        <!-- Digitação do usuário -->
+        <textarea class="campo-digitacao" cols="40" rows="8"></textarea>
+        <div class="botoes">
+            <a id="botao-reiniciar" class="btn-floating btn-large waves-effect waves-light red">
+                <i class="material-icons">restore</i>
+            </a>
+        </div>
 
-    <!-- Contador de palavras e caracteres do usuário -->
-    <ul class="informacoes">
-        <li>
-            <spam id="contador-caracteres">0</spam> caracteres
-        </li>
-        <li>
-            <spam id="contador-palavras">0</spam> palavras
-        </li>
-    </ul>
+        <!-- Contador de palavras e caracteres do usuário -->
+        <ul class="informacoes center">
+            <li>
+                <spam id="contador-caracteres">0</spam> caracteres
+            </li>
+            <li>
+                <spam id="contador-palavras">0</spam> palavras
+            </li>
+        </ul>
+        <section class="placar">
+            <h3 class="center">Placar</h3>
+            <table class="centered bordered">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Nº de Palavras</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Guilherme</td>
+                        <td>10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
 
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
