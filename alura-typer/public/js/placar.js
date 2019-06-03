@@ -1,3 +1,6 @@
+// Chamando o placar através do botão
+$("#botao-placar").click(mostraPlacar);
+
 // Coloca o placar na tabela
 function inserePlacar() {
     var corpoTabela = $(".placar").find("tbody");
@@ -33,4 +36,9 @@ function novaLinha(usuario, numPalavras) {
 function removeLinha() {
     event.preventDefault();
     $(this).parent().parent().remove();
+}
+
+// Função de mostrar o placar
+function mostraPlacar() {
+    $(".placar").slideToggle(1200);
 }
