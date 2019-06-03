@@ -70,21 +70,6 @@ function inicializaMarcadores() {
     });
 }
 
-// Coloca o placar na tabela
-function inserePlacar() {
-    var corpoTabela = $(".placar").find("tbody");
-    var usuario = "Guilherme";
-    var numPalavras = $("contador-palavras").text();
-
-    var linha = "<tr>" +
-        "<td>" + usuario + "</td>" +
-        "<td>" + numPalavras + "</td>" +
-        "</tr>";
-
-    corpoTabela.prepend(linha);
-
-}
-
 // Botão para reiniciar
 function reiniciaJogo() {
     $("#botao-reiniciar").click(function () {
