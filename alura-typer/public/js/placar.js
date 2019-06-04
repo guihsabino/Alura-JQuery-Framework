@@ -10,7 +10,20 @@ function inserePlacar() {
     var linha = novaLinha(usuario, numPalavras);
     linha.find(".botao-remover").click(removeLinha);
 
-    corpoTabela.prepend(linha);
+    corpoTabela.append(linha);
+
+    $(".placar").slideDown(500);
+    scrollPlacar();
+}
+
+// Função que desce a página até o placar 
+function scrollPlacar() {
+    var posicaoPlacar = $(".placar").offset().top;
+
+    $("html, body").animate(
+        {
+            scrollTop: posicaoPlacar + "px"
+        }, 1000);
 }
 
 // Função de criação de linhas de pontuação
@@ -35,10 +48,15 @@ function novaLinha(usuario, numPalavras) {
 // Função de remoção de linhas de pontuação
 function removeLinha() {
     event.preventDefault();
-    $(this).parent().parent().remove();
+    var linhaTab = $(this).parent().parent();
+    linhaTab.fadeOut(1000);
+    // Função para remover linha após 1 segundo, isso após esmaecer a linha
+    setTimeout(function () {
+        linhaTab.remove();
+    }, 1000);
 }
 
 // Função de mostrar o placar
 function mostraPlacar() {
-    $(".placar").slideToggle(1200);
+    $(".placar").stop().slideToggle(1200);
 }
