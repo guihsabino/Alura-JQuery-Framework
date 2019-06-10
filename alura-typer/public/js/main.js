@@ -18,6 +18,12 @@ function atualizaTmanahoFrase() {
     tamanhoFrase.text(numeroPalavras);
 }
 
+// Atualiza tempo inicial
+function atualizaTempoInicial(tempo) {
+    tempoInicial = tempo;
+    $('#tempo-digitacao').text(tempo);
+}
+
 // Conta o numero de caracteres e palavras
 function inicializaContadores() {
     campo.on("input", function () {
@@ -33,8 +39,8 @@ function inicializaContadores() {
 
 // Decrescendo tempo
 function inicializaCronometro() {
-    var tempoRestante = $("#tempo-digitacao").text();
     campo.one("focus", function () {
+        var tempoRestante = $("#tempo-digitacao").text();
         var cronometroId = setInterval(function () {
             tempoRestante--;
             $("#tempo-digitacao").text(tempoRestante);
@@ -55,8 +61,8 @@ function finalizaJogo() {
 
 // Observando o que o cara escreve
 function inicializaMarcadores() {
-    var frase = $(".frase").text();
     campo.on("input", function () {
+        var frase = $(".frase").text();
         var digitado = campo.val();
         var comparavel = frase.substr(0, digitado.lenght);
         // Comparando o digitado com a frase

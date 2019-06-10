@@ -33,3 +33,21 @@ body {
 .placar {
     display: none;
 }
+
+#erro {
+    color: red;
+    display: none;
+}
+
+#spinner {
+    display: none;
+}
+
+#frase-id {
+    width: 40px;
+    text-align: center;
+}
+
+#botao-sync {
+    float: right;
+}

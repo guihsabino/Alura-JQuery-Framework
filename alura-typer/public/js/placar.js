@@ -1,5 +1,6 @@
 // Chamando o placar através do botão
 $("#botao-placar").click(mostraPlacar);
+$("#botao-sync").click(sincronizaPlacar);
 
 // Coloca o placar na tabela
 function inserePlacar() {
@@ -59,4 +60,13 @@ function removeLinha() {
 // Função de mostrar o placar
 function mostraPlacar() {
     $(".placar").stop().slideToggle(1200);
+}
+
+function sincronizaPlacar() {
+    var placar = [];
+    var linhas = $("tbody>tr");
+
+    linhas.each(function () {
+        
+    });
 }
